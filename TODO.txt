@@ -1,0 +1,1 @@
+- from web folder: ../vendor/bin/drush site-alias --with-db --show-passwords --with-optional @self > ../drush/lvd.alias.drushrc.php
