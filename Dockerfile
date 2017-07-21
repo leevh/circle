@@ -7,7 +7,8 @@ RUN apt-get update -qq && apt-get install -qqy \
     xvfb \
     xdg-utils \
     sudo \
-    uuid-runtime
+    uuid-runtime \
+    curl
 
 RUN DISPLAY=:1.0 && export DISPLAY \
 
