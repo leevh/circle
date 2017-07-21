@@ -2,7 +2,7 @@ version: 2
 jobs:
    build:
      docker:
-       - image: leevh/docker-git:latest
+       - image: martinheidegger/circleci-dind:latest
      steps:
        - checkout
        - run: docker info
