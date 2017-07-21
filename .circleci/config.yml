@@ -2,7 +2,7 @@ version: 2
 jobs:
    build:
      docker:
-       - image: docker:17.05.0-ce-git
+       - image: gitlab/dind:latest
      steps:
        - checkout
        - setup_remote_docker
@@ -10,5 +10,4 @@ jobs:
        - run:
            name: Install dependencies
            command: |
-              apk --no-cache add curl sudo bash \
-              && curl -fsSL get.docksal.io | sh
+              curl -fsSL get.docksal.io | sh
