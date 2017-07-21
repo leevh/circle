@@ -16,6 +16,6 @@ RUN DISPLAY=:1.0 && export DISPLAY \
 USER ci
 WORKDIR "/home/ci"
 
-RUN curl -fsSL get.docksal.io | sh
-
 VOLUME /var/lib/docker
+
+RUN curl -fsSL get.docksal.io | sh
