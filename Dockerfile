@@ -25,4 +25,4 @@ WORKDIR "/home/ci"
 
 ADD setup_docksal.sh /home/ci/setup_docksal.sh
 
-ADD private/ci_scripts/daemonup /usr/share/kalabox/scripts/daemonup
+ADD daemonup /usr/share/kalabox/scripts/daemonup
