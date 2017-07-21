@@ -1,5 +1,13 @@
 FROM leevh/dind-ubuntu:phusion-base-overlay
 
+RUN apt-get update -qq && apt-get install -qqy \
+    iptables \
+    bridge-utils \
+    cgroup-bin \
+    xvfb \
+    xdg-utils \
+    sudo
+
 RUN DISPLAY=:1.0 && export DISPLAY \
 
 # Setup a non root user
