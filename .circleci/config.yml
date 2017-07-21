@@ -5,4 +5,4 @@ jobs:
        - image: martinheidegger/circleci-dind:latest
      steps:
        - checkout
-       - run: docker info
+       - run: lsb_release -a
