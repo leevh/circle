@@ -1,4 +1,4 @@
-FROM leevh/dind-ubuntu:phusion-base-overlay
+FROM ubuntu:xenial
 
 RUN apt-get update -qq && apt-get install -qqy \
     iptables \
