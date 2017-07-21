@@ -12,7 +12,7 @@ RUN DISPLAY=:1.0 && export DISPLAY \
 
 # Setup a non root user
 && adduser --disabled-password --gecos '' ci && adduser ci sudo && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
-&& sudo usermod -aG docker ci
+&& sudo groupadd docker && sudo usermod -aG docker ci
 
 USER ci
 WORKDIR "/home/ci"
