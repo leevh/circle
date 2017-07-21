@@ -5,4 +5,4 @@ jobs:
       - image: leevh/docker-git:latest
     steps:
       - test
-      - run: command: docker info
+      - run: command: echo "hello"
