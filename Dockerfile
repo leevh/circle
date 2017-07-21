@@ -1,4 +1,4 @@
-FROM leevh/dind-ubuntu:phusion-base-overlay
+FROM ubuntu:xenial
 
 RUN apt-get update -qq && apt-get install -qqy \
     iptables \
@@ -17,11 +17,12 @@ RUN DISPLAY=:1.0 && export DISPLAY \
 
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
+
 VOLUME /var/lib/docker
 
 USER ci
 WORKDIR "/home/ci"
 
-RUN curl -fsSL get.docksal.io | sh
+ADD setup_docksal.sh /home/ci/setup_docksal.sh
 
 ADD private/ci_scripts/daemonup /usr/share/kalabox/scripts/daemonup
