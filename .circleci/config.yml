@@ -2,7 +2,7 @@ version: 2
 jobs:
    build:
      docker:
-       - image: martinheidegger/circleci-dind:latest
+       - image: docker:17.05.0-ce-git
      steps:
        - checkout
-       - run: lsb_release -a
+       - run: docker info
