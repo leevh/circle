@@ -12,4 +12,5 @@ jobs:
            name: Install dependencies
            command: |
               docker build -t docksal-test-framework .
+              echo "hi"
               docker run --name=kalabox-$CI_JOB_ID -d --privileged docksal-test-framework /home/ci/setup_docksal.sh
