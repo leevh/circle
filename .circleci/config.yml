@@ -11,4 +11,5 @@ jobs:
            name: Install dependencies
            command: |
               RUN apk --no-cache add curl \
+              RUN apk add --no-cache bash \
               curl -fsSL get.docksal.io | sh
