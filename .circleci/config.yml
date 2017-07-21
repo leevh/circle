@@ -1,8 +1,9 @@
 version: 2
 jobs:
    build:
+     working_directory: /app
      docker:
-       - image: gitlab/dind:latest
+       - image: docker:17.05.0-ce-git
      steps:
        - checkout
        - setup_remote_docker
@@ -10,4 +11,5 @@ jobs:
        - run:
            name: Install dependencies
            command: |
-              curl -fsSL get.docksal.io | sh
+              docker build -t docksal-test-framework . \
+              && docker run --name=kalabox-$CI_JOB_ID -d --privileged viupal-test-framework /sbin/my_init
