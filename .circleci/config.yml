@@ -12,6 +12,7 @@ jobs:
            name: Install dependencies
            command: |
               apk add --update ca-certificates openssl && update-ca-certificates
+              apk add bash bash-doc bash-completion curl
               wget https://raw.githubusercontent.com/docksal/docksal/v1.4.0/bin/fin && mv fin /usr/local/bin/fin && chmod +x /usr/local/bin/fin
               fin update
               fin sysinfo
