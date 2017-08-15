@@ -12,5 +12,6 @@ jobs:
            name: Install dependencies
            command: |
               wget https://raw.githubusercontent.com/docksal/docksal/v1.4.0/bin/fin && mv fin /usr/local/bin/fin && chmod +x /usr/local/bin/fin
+              curl -L https://github.com/docker/compose/releases/download/1.14.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
               fin update -y
               fin sysinfo
