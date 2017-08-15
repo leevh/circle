@@ -11,5 +11,4 @@ jobs:
        - run:
            name: Install dependencies
            command: |
-              docker build -t docksal-test-framework .
-              docker run -p 443:443 -p 53:53 -v /var/run/docker.sock:/var/run/docker.sock docksal-test-framework /home/ci/setup_docksal.sh
+              wget https://raw.githubusercontent.com/docksal/docksal/v1.4.0/bin/fin && mv fin /usr/local/bin/fin && chmod +x /usr/local/bin/fin
