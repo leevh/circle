@@ -3,7 +3,7 @@ jobs:
    build:
      working_directory: /app
      docker:
-       - image: docker:17.05.0-ce-git
+       - image: jpetazzo/dind
      steps:
        - checkout
        - setup_remote_docker
@@ -11,7 +11,6 @@ jobs:
        - run:
            name: Install dependencies
            command: |
-              apk add --update ca-certificates openssl bash curl curl-dev util-linux && update-ca-certificates
               wget https://raw.githubusercontent.com/docksal/docksal/v1.4.0/bin/fin && mv fin /usr/local/bin/fin && chmod +x /usr/local/bin/fin
               fin update -y
               fin sysinfo
