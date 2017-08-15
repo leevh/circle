@@ -11,4 +11,4 @@ jobs:
        - run:
            name: Install dependencies
            command: |
-              wget https://raw.githubusercontent.com/docksal/docksal/v1.4.0/bin/fin && mv fin /usr/local/bin/fin && chmod +x /usr/local/bin/fin
+              wget --no-check-certificate https://raw.githubusercontent.com/docksal/docksal/v1.4.0/bin/fin && mv fin /usr/local/bin/fin && chmod +x /usr/local/bin/fin
