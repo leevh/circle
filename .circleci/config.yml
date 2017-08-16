@@ -11,8 +11,7 @@ jobs:
        - run:
            name: Install dependencies
            command: |
-              adduser --disabled-password --gecos '' ci && adduser ci sudo && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-              su ci
+              adduser --disabled-password --gecos '' ci && adduser ci sudo && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && su ci
 
        - run:
            name: fin
