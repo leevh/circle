@@ -13,6 +13,10 @@ jobs:
            command: |
               adduser --disabled-password --gecos '' ci && adduser ci sudo && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
               su ci
+
+       - run:
+           name: fin
+           command: |
               cd /home/ci
               wget https://raw.githubusercontent.com/docksal/docksal/v1.4.0/bin/fin && sudo mv fin /usr/local/bin/fin && sudo chmod +x /usr/local/bin/fin
               curl -L https://github.com/docker/compose/releases/download/1.14.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
